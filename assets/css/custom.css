@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --dark: #292F36;
+    --blue: #4ECDC4;
+    --white: #FFFFFF;
+    --red: #FF6B6B;
+    --purple: #7765E3;
+    --bg2: #f7f7f7;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@media (max-width: 576px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+#projetos, #vantagens {
+    padding: 40px 0;
+}
+
+/* HEADER */
+header {
+    background-image: url(/assets/images/banners/2.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 700px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+header img {
+    width: 600px;
+}
+
+/* VANTAGENS */
+#vantagens .area-card-vantagem {
+    display: flex;
+    justify-content: center;
+}
+
+#vantagens .area-card-vantagem .card-vantagem {
+    text-align: center;
+    margin: 10px 25px;
+}
+
+#vantagens .area-card-vantagem .card-vantagem i {
+    color: var(--purple);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+#vantagens .area-card-vantagem .card-vantagem h3 {
+    color: var(--dark);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* PROJETOS */
+#projetos {
+    background-color: var(--bg2);
+}
+
+#projetos .area-card-projeto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#projetos .area-card-projeto .card-projeto {
+    width: 30%;
+    height: 200px;
+    margin: 15px 10px;
+    padding: 10px;
+    background-color: var(--blue);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#projetos .area-card-projeto .card-projeto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+#projetos .cta {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#projetos .cta a {
+    background-color: var(--red);
+    padding: 20px 30px;
+    font-size: 1.5rem;
+    color: var(--white);
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 50px;
+    border: 6px solid var(--dark);
+    transition: all .3s;
+}
+
+#projetos .cta :hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transform: scale(1.03);
+}
