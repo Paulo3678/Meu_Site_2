@@ -24,12 +24,36 @@ h2 {
     }
 }
 
+a.btn-cta {
+    background-color: var(--red);
+    padding: 20px 30px;
+    font-size: 1.5rem;
+    color: var(--white);
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 50px;
+    border: 6px solid var(--dark);
+    transition: all .3s;
+    text-align: center;
+}
+
+a.btn-cta:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transform: scale(1.03);
+}
+
+
 a:hover {
     text-decoration: none;
 }
 
-#projetos, #vantagens {
+#sobre, #conhecimentos, #projetos, #vantagens {
     padding: 40px 0;
+}
+
+button:focus {
+    outline: none;
 }
 
 /* HEADER */
@@ -48,6 +72,12 @@ header {
 
 header img {
     width: 600px;
+}
+
+@media (max-width: 768px) {
+    header img {
+        width: 100%;
+    }
 }
 
 /* VANTAGENS */
@@ -74,6 +104,24 @@ header img {
     text-transform: uppercase;
 }
 
+@media (max-width: 992px) {
+    #vantagens .area-card-vantagem {
+        flex-wrap: wrap
+    }
+
+    #vantagens .area-card-vantagem .card-vantagem {
+        width: 25%;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    #vantagens .area-card-vantagem .card-vantagem {
+        width: 100%;
+    }
+}
+
+
 /* PROJETOS */
 #projetos {
     background-color: var(--bg2);
@@ -92,6 +140,50 @@ header img {
     padding: 10px;
     background-color: var(--blue);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+#projetos .area-card-projeto .card-projeto .content {
+    margin-bottom: 0;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#projetos .area-card-projeto .card-projeto .content .show {
+    position: absolute;
+    top: -100%;
+    right: 100%;
+    width: 250px;
+    height: 250px;
+    background-color: rgba(0, 0, 0, .4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition: all .5s;
+    border-radius: 50%;
+}
+
+#projetos .area-card-projeto .card-projeto .content .show span {
+    background-color: var(--blue);
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    padding: 10px 15px;
+}
+
+#projetos .area-card-projeto .card-projeto:hover {
+    transform: scale(1.03);
+}
+
+#projetos .area-card-projeto .card-projeto:hover .content .show {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: unset;
 }
 
 #projetos .area-card-projeto .card-projeto img {
@@ -100,27 +192,213 @@ header img {
     object-fit: cover;
 }
 
-
-
 #projetos .cta {
     margin-top: 20px;
     text-align: center;
 }
 
-#projetos .cta a {
+
+@media (max-width: 768px) {
+    #projetos .area-card-projeto .card-projeto {
+        width: 45%;
+    }
+}
+
+@media (max-width: 425px) {
+    #projetos .area-card-projeto .card-projeto {
+        width: 100%;
+    }
+}
+
+#projetos .area-modal-projetos {
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    z-index: 100;
+    display: none;
+}
+
+#projetos .area-modal-projetos.show{
+    display: block;
+}
+
+#projetos .area-modal-projetos .area-imagem {
+    width: 900px;
+    margin: 0 auto;
+}
+
+#projetos .area-modal-projetos img {
+    width: 100%;
+}
+
+#projetos .area-modal-projetos .btn-close-modal-projetos {
+    width: 100%;
     background-color: var(--red);
-    padding: 20px 30px;
-    font-size: 1.5rem;
-    color: var(--white);
-    display: inline-block;
     font-weight: bold;
+    padding: 10px 20px;
+    color: #fff;
+    border: 4px solid #fff;
+}
+
+#projetos .area-modal-projetos .btn-close-modal-projetos:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(207, 91, 91, 0.3) 0px 18px 36px -18px inset;
+}
+
+@media (max-width: 992px) {
+    #projetos .area-modal-projetos .area-imagem {
+        width: 768px;
+    }
+}
+
+@media (max-width: 768px) {
+    #projetos .area-modal-projetos .area-imagem {
+        width: 576px;
+    }
+}
+
+@media (max-width: 576px) {
+    #projetos .area-modal-projetos .area-imagem {
+        width: 100%;
+    }
+}
+
+/* CONHECIMENTOS */
+#conhecimentos {
+    background-image: url(/assets/images/banners/1.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+#conhecimentos h2 {
+    margin-bottom: 40px;
+}
+
+#conhecimentos .item {
+    background-color: #fff;
+}
+
+#conhecimentos .item .image {
+    padding: 20px;
+}
+
+#conhecimentos .item .content {
+    padding: 10px;
+    background-color: var(--bg2);
+    min-height: 93px;
+}
+
+#conhecimentos .item h3 {
+    color: #000;
+    text-align: center;
     text-transform: uppercase;
-    border-radius: 50px;
-    border: 6px solid var(--dark);
+    font-size: 1.3rem;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#conhecimentos .item img {
+    width: 100%;
+}
+
+#conhecimentos .owl-nav {
+    display: flex;
+    justify-content: center;
+}
+
+#conhecimentos .owl-nav button span {
+    font-size: 3rem;
+}
+
+/* SOBRE */
+
+#sobre img {
+    width: 100%;
+}
+
+#sobre ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sobre i.fa-circle-check {
+    color: var(--purple);
+}
+
+#sobre .cta a {
+    width: 100%;
+}
+
+/* GITHUB */
+.btn-github-pulse {
+    background: #000;
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    height: 0;
+    padding: 35px;
+    text-decoration: none;
+    border-radius: 50%;
+    animation-name: pulse;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+    }
+
+    80% {
+        box-shadow: 0 0 0 14px rgba(0, 0, 0, 0);
+    }
+}
+
+
+
+
+/* RODAPÉ */
+footer {
+    background-color: var(--bg2);
+    padding: 10px;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer .area-redes {
+    display: flex;
+    justify-content: center;
+}
+
+footer .area-redes a {
+    font-size: 1.5rem;
+    margin: 0 5px;
+    background-color: var(--blue);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
     transition: all .3s;
 }
 
-#projetos .cta :hover {
+footer .area-redes a:hover {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transform: scale(1.03);
 }
