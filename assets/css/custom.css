@@ -58,7 +58,7 @@ button:focus {
 
 /* HEADER */
 header {
-    background-image: url(/assets/images/banners/2.png);
+    background-image: url(./../images/banners/2.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -268,7 +268,7 @@ header img {
 
 /* CONHECIMENTOS */
 #conhecimentos {
-    background-image: url(/assets/images/banners/1.png);
+    background-image: url(./../images/banners/1.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
