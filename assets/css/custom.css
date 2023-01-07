@@ -48,6 +48,23 @@ a:hover {
     text-decoration: none;
 }
 
+@media (max-width:576px) {
+    a.btn-cta{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width:425px) {
+    a.btn-cta{
+        font-size: 1rem;
+    }
+}
+@media (max-width:320px) {
+    a.btn-cta{
+        font-size: .9rem;
+    }
+}
+
 #sobre, #conhecimentos, #projetos, #vantagens {
     padding: 40px 0;
 }
@@ -354,6 +371,7 @@ header img {
     animation-duration: 1.5s;
     animation-timing-function: ease-out;
     animation-iteration-count: infinite;
+    z-index: 90;
 }
 
 @keyframes pulse {
