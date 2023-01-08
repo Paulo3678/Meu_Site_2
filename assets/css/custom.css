@@ -49,18 +49,19 @@ a:hover {
 }
 
 @media (max-width:576px) {
-    a.btn-cta{
+    a.btn-cta {
         font-size: 1.2rem;
     }
 }
 
 @media (max-width:425px) {
-    a.btn-cta{
+    a.btn-cta {
         font-size: 1rem;
     }
 }
+
 @media (max-width:320px) {
-    a.btn-cta{
+    a.btn-cta {
         font-size: .9rem;
     }
 }
@@ -75,7 +76,7 @@ button:focus {
 
 /* HEADER */
 header {
-    background-image: url(./../images/banners/2.png);
+    background-image: url(./../images/banners/header.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -91,9 +92,40 @@ header img {
     width: 600px;
 }
 
+header h2 {
+    margin: 0 auto;
+    max-width: 600px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+header p {
+    margin-bottom: 0;
+}
+
+header .texts {
+    margin-bottom: 25px;
+}
+
+header img.logo {
+    width: 400px;
+    margin-top: 20px;
+}
+
+
 @media (max-width: 768px) {
     header img {
         width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    header img.logo {
+        width: 100%;
+    }
+
+    header {
+        background-image: url(./../images/banners/mob/header.jpg);
     }
 }
 
@@ -134,7 +166,12 @@ header img {
 
 @media (max-width: 576px) {
     #vantagens .area-card-vantagem .card-vantagem {
-        width: 100%;
+        width: 40%;
+        margin: 0;
+    }
+
+    #vantagens .area-card-vantagem .card-vantagem h3 {
+        font-size: 1.2em;
     }
 }
 
@@ -239,7 +276,7 @@ header img {
     display: none;
 }
 
-#projetos .area-modal-projetos.show{
+#projetos .area-modal-projetos.show {
     display: block;
 }
 
@@ -285,7 +322,7 @@ header img {
 
 /* CONHECIMENTOS */
 #conhecimentos {
-    background-image: url(./../images/banners/1.png);
+    background-image: url(./../images/banners/conhecimentos.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -332,6 +369,15 @@ header img {
     font-size: 3rem;
 }
 
+@media (max-width:576px) {
+    #conhecimentos .item h3 {
+        font-size: 1.2em;
+    }
+    #conhecimentos {
+        background-image: url(./../images/banners/mob/conhecimentos.jpg);
+    }
+}
+
 /* SOBRE */
 
 #sobre img {
@@ -352,7 +398,7 @@ header img {
 }
 
 /* GITHUB */
-.btn-github-pulse {
+a.btn-github-pulse {
     background: #000;
     color: white;
     position: fixed;
@@ -389,13 +435,23 @@ header img {
 
 /* RODAPÉ */
 footer {
-    background-color: var(--bg2);
+    background-image: url(./../images/banners/footer.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 10px;
+    padding-top: 20px;
     text-align: center;
+    color: #fff;
 }
 
 footer p {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+footer img {
+    width: 300px;
+    margin-bottom: 15px;
 }
 
 footer .area-redes {
@@ -419,4 +475,14 @@ footer .area-redes a {
 footer .area-redes a:hover {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transform: scale(1.03);
+}
+
+@media (max-width: 576px) {
+    footer img {
+        width: 100%;
+    }
+
+    footer {
+        background-image: url(./../images/banners/mob/footer.jpg);
+    }
 }
